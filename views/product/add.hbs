@@ -1,0 +1,44 @@
+<form action="/product/add" method="post" class="container col-md-8 card bg-dark mt-3">
+    <h1 class="text-danger text-uppercase text-center mt-3">Add new Product</h1>
+    <div class="form-group mt-3">
+        <label for="name" class="text-primary">Name</label>
+        <input class="form-control" type="text" name="name" required minlength="3" maxlength="30">
+    </div>
+    <div class="form-group mt-3">
+        <label for="Price" class="text-primary">Price</label>
+        <input class="form-control" type="number" name="price" id="" required>
+    </div>
+    <div class="form-group mt-3">
+        <label for="Description" class="text-primary">Description</label>
+        <input class="form-control" type="text" name="description" required maxlength="100">
+    </div>
+    <div class="form-group mt-3">
+        <label for="theme" class="text-primary">Theme</label>
+        <br>
+        <select name="theme" id="theme">
+            <option value="City">City</option>
+            <option value="Friends">Friends</option>
+            <option value="Ideas">Ideas</option>
+            <option value="Architecture">Architecture</option>
+            <option value="Technic">Technic</option>
+            <option value="Classic">Classic</option>
+        </select>
+        <!--        <input type="radio" name="gender" value="Male"> Male-->
+<!--        <input type="radio" name="gender" value="Female"> Female-->
+    </div>
+    <div class="form-group mt-3">
+        <label for="image" class="text-primary">Image</label>
+        <input class="form-control" type="url" name="image" required>
+    </div>
+    <div class="form-group mt-3 mb-3 text-center">
+        <input class="btn btn-primary" type="submit" value="Add">
+        <input class="btn btn-success" type="reset" value="Clear">
+    </div>
+</form>
+
+<style>
+    form{
+        top: 20px;
+        bottom: 20px;
+    }
+</style>

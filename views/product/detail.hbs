@@ -1,0 +1,36 @@
+<br>
+<div class="container col-md-10 card bg-dark">
+    <div class="row" id="frame">
+        <div class="col-md-5 text-center">
+            <img class="rounded" src="{{product.image}}" width="450" height="450" alt="this is student image">
+        </div>
+        <div class="col-md-7 card bg-light" id="infoframe">
+            <div class="card-header rounded bg-danger">
+                <h1 class=" text-center ">Product Information</h1>
+            </div>
+            <div class="card-body rounded">
+                <h3>Product Name: {{ product.name }}</h3>
+                <h3>Price: ${{ product.price }} </h3>
+                <h3>Theme: {{ product.theme }}</h3>
+                <h3>Description: {{ product.description }}</h3>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+
+<style>
+    #frame{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-right: 10px;
+    }
+    /*#infoframe{*/
+    /*    margin-left: 20px;*/
+    /*}*/
+
+</style>
+
+
+
+

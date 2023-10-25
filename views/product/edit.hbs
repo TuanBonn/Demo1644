@@ -1,0 +1,39 @@
+<form action="/product/edit/{{ product._id }}" method="post" class="container col-md-8 card bg-dark mt-3">
+    <h1 class="text-danger text-uppercase text-center mt-3">Edit student</h1>
+    <div class="text-center">
+        <img src="{{ product.image }}" width="150" height="150" class="rounded">
+    </div>
+    <div class="form-group mt-3">
+        <label for="name" class="text-light">Name</label>
+        <input class="form-control" type="text" name="name" required minlength="3" maxlength="30"
+               value="{{ product.name }}">
+    </div>
+    <div class="form-group mt-3">
+        <label for="price" class="text-light">Price</label>
+        <input class="form-control" type="number" name="price" value="{{ product.price }}">
+    </div>
+    <div class=" form-group mt-3">
+        <label for="description" class="text-light">Description</label>
+        <input class="form-control" type="text" name="description" max="100" value="{{ product.description }}">
+    </div>
+    <div class="form-group mt-3">
+        <label for="image" class="text-light">Image</label>
+        <input class="form-control" type="url" name="image" value="{{ product.image }}">
+    </div>
+    <div class="form-group mt-3">
+        <label for="theme" class="text-light">Theme</label>
+        <br>
+        <select name="theme" id="theme" required>
+            <option value=""></option>
+            <option value="City">City</option>
+            <option value="Friends">Friends</option>
+            <option value="Ideas">Ideas</option>
+            <option value="Architecture">Architecture</option>
+            <option value="Technic">Technic</option>
+            <option value="Classic">Classic</option>
+        </select>
+    </div>
+    <div class="form-group mt-3 mb-3 text-center">
+        <input class="btn btn-primary" type="submit" value="Edit" style="width: 200px">
+    </div>
+</form>
