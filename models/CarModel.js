@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-var ProductSchema = mongoose.Schema(
+var CarSchema = mongoose.Schema(
     {
         name: {
             type: String,
@@ -10,16 +10,12 @@ var ProductSchema = mongoose.Schema(
             type: Number,
             required: [true, 'Price can not be empty']
         },
-        description: String,
-        theme: {
-            type: String,
-            enum: ['City', 'Friends', 'Ideas', 'Architecture', 'Technic', 'Classic']
-        },
+        quantity:Number,
         image: {
             type: String,
             required: [true, 'Image can not be empty']
         },
     }
 );
-var ProductModel = mongoose.model('product', ProductSchema, 'product');
-module.exports = ProductModel;
+var CarModel = mongoose.model('car', CarSchema, 'car');
+module.exports = CarModel;

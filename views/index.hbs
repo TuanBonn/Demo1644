@@ -5,7 +5,7 @@
             <div class="col">
                 <form action="/search" method="post" class="">
                     <div class="form-group">
-                        <input class="form-control" type="search" placeholder="Search by student's name" name="name" id=""
+                        <input class="form-control" type="search" placeholder="Search by product's name" name="name" id=""
                                required>
                     </div>
                 </form>
@@ -29,7 +29,7 @@
                             <img src="{{ image }}" class="card-img-top bg-dark" width="150" height="250 alt="{{ name }}">
                         </a>
                         <div class="card-body   ">
-                            <h5 class="card-title">{{ name }}</h5>
+                            <h6 class="card-title">{{ name }}</h6>
                             <p class="card-text">${{ price }}</p>
                             <a href="/detail/{{ _id }}" class="btn btn-danger">View Details</a>
                             <a href="#" class="btn btn-primary">Add to cart</a>

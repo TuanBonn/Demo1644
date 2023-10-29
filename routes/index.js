@@ -8,25 +8,6 @@ var router = express.Router();
 //   res.render('index', { title: 'Express' });
 // });
 
-router.get('/login', (req, res) => {
-  res.render('login');
-})
-
-router.post('/login', async (req, res) => {
-  var login = await UserModel.findOne(
-      {
-        username: req.body.username,
-        password: req.body.password
-      }
-  )
-  //điều hướng web khi login succeed (vào trang admin) hoặc login fail (về lại trang login)
-  if (login)  //login == true
-    res.redirect('/product')
-  else
-    res.redirect('/login');
-})
-
-
 router.get('/', async (req, res) => {
   var products = await ProductModel.find();
   res.render('index', {products: products})
@@ -67,5 +48,11 @@ router.get('/namedesc', async (req, res) => {
   var products = await ProductModel.find().sort({ name: -1 });
   res.render('index', { products: products });
 })
+
+// router.get('/sortbytheme', async (req, res) => {
+//   // Truy vấn MongoDB chỉ lấy các sản phẩm có tên là 'City' và sắp xếp chúng theo tên giảm dần.
+//   var products = await ProductModel.find({ theme: 'City' });
+//   res.render('index', { products: products });
+// });
 
 module.exports = router;
